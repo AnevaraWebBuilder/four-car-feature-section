@@ -1,0 +1,202 @@
+:root{
+
+  /* COLORS */
+
+  /* PRIMARY */
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* NEUTRAL */
+
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: #FFFFFF;
+
+  /* FONT */
+
+  --primaryFont: 'Poppins', sans-serif;
+
+}
+
+*{
+  margin: 0 auto;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--primaryFont);
+}
+
+body{
+  background-color: var(--veryLightGray);
+}
+
+.grid1{
+  display: grid;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 3.6rem;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 9rem;
+  color: var(--veryDarkBlue);
+  margin: 0;
+}
+
+h2{
+  font-size: 3.6rem;
+  color: var(--veryDarkBlue);
+}
+
+.grid1 p{
+  font-size: 1.5rem;
+  color: var(--grayishBlue);
+  max-width: 50rem;
+  text-align: center;
+  margin: 3rem auto 5rem;
+  line-height: 1.7;
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 10rem;
+}
+
+.card{
+  background-color: var(--white);
+  width: 35rem;
+  border-radius: .7rem;
+  box-shadow: 0 .6rem 3rem -2rem;
+  
+  height: 24rem;
+}
+
+h3{
+  font-size: 2rem;
+  color: var(--veryDarkBlue);
+  padding: 3rem 3.5rem 1.6rem;
+}
+
+.card p{
+  font-size: 1.3rem;
+  width: 80%;
+  color: var(--grayishBlue);
+}
+
+.icon{
+  position: relative;
+  right: -9rem;
+  bottom: -5rem;
+  width: 5%;
+}
+
+.supervisor{
+  margin: 0 0 0 12rem;
+  border-top: .4rem solid var(--cyan);
+}
+
+.team-builder{
+  border-top: .4rem solid var(--red);
+}
+
+.karma{
+  margin-top: 3rem;
+  border-top: .4rem solid var(--orange);
+}
+
+.calculator{
+  margin: 0 12rem 0 0;
+  border-top: .4rem solid var(--blue);  
+}
+
+.supervisor, .calculator{
+  margin-top: 15rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width: 1199px) and (min-width: 992px){
+
+.grid2{
+  display: flex;
+}
+
+.card{
+  margin: 0 auto;
+  width: 32rem;
+}
+
+.karma{
+  margin-top: 2rem;
+}
+
+.supervisor, .calculator{
+  margin-top: 12rem;
+}
+
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width: 991px) and (min-width: 768px){
+
+.grid2{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  margin: 2rem auto;
+}
+
+
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width: 767px){
+
+h1{
+  font-size: 2.3rem;
+}
+
+h2{
+  font-size: 2.4rem;
+}
+
+.grid2{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  margin: 2rem auto;
+  width: 95%;
+}
+
+.icon{
+  padding-right: 2rem;
+}
+
+
+  
+}
